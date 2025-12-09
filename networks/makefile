@@ -2,29 +2,29 @@ CXX      := g++
 CXXFLAGS := -std=c++17 -Wall -Wextra -O2
 
 # Targets
-TARGETS := binarysearch mergesort fft integermultiplication medianofmedians quicksort randomizedpivot
+TARGETS := edp flows maxflow maxmatch mincostflow mincut psuedoomnipotence
 
 all: $(TARGETS)
 
-binarysearch: binarysearch.o
+edp: edp.o
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
-mergesort: mergesort.o
+flows: flows.o
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
-fft: fft.o
+maxflow: maxflow.o
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
-integermultiplication: integermultiplication.o
+maxmatch: maxmatch.o
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
-medianofmedians: medianofmedians.o
+mincostflow: mincostflow.o
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
-quicksort: quicksort.o
+mincut: mincut.o
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
-randomizedpivot: randomizedpivot.o
+psuedoomnipotence: psuedoomnipotence.o
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
 %.o: %.cpp
