@@ -53,11 +53,11 @@ public:
             }
         }
         
-        std::cout << \"MST edges:\" << std::endl;
+        std::cout << "MST edges:" << std::endl;
         for (int i = 1; i < V; i++) {
             if (parent[i] != -1) {
-                std::cout << \"  \" << parent[i] << \" - \" << i 
-                         << \" : \" << key[i] << std::endl;
+                std::cout << "  " << parent[i] << " - " << i 
+                         << " : " << key[i] << std::endl;
             }
         }
         
@@ -66,8 +66,8 @@ public:
 };
 
 int main() {
-    std::cout << \"=== Prim's MST Algorithm ===\" << std::endl;
-    std::cout << \"Time: O((V+E) log V), Space: O(V)\" << std::endl << std::endl;
+    std::cout << "=== Prim's MST Algorithm ===" << std::endl;
+    std::cout << "Time: O((V+E) log V), Space: O(V)" << std::endl << std::endl;
     
     Graph g(5);
     g.addEdge(0, 1, 2);
@@ -79,7 +79,7 @@ int main() {
     g.addEdge(3, 4, 9);
     
     int weight = g.primMST();
-    std::cout << \"\\nTotal MST weight: \" << weight << std::endl;
+    std::cout << "\nTotal MST weight: " << weight << std::endl;
     
     return 0;
 }
